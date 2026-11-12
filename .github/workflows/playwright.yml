@@ -1,5 +1,4 @@
-#To run manually: go to your repo → Actions → Playwright Tests → Run workflow → choose 
-your parameters → Run.
+#To run manually: go to your repo → Actions → Playwright Tests → Run workflow → choose your parameters → Run.
 name: 🎭 Playwright Tests
 on:
   push:
@@ -60,8 +59,7 @@ jobs:
           $tag = $suite -replace 'test:', ''
           $browserFlag = "--project=$browser"
           $modeFlag = if ($mode -eq 'headed') { '--headed' } else { '' }
-          npx playwright test --grep "@$tag" $browserFlag $modeFlag --reporter=dot --
-output=test-results
+          npx playwright test --grep "@$tag" $browserFlag $modeFlag --reporter=dot --output=test-results
         env:
           CI: "1"
       - name: 📊 Upload Playwright HTML Report
