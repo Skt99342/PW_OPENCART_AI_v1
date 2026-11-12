@@ -18,7 +18,7 @@ test.describe.serial('CRUD Workflow API Tests', () => {
     // Product CRUD Workflow
     // ---------------------------------------------------------
 
-    test('Workflow - Product Create, Update, Delete @master @regression @e2e @api', async ({ request }) => {
+    test('Workflow - Product Create, Update, Delete @master @regression @api', async ({ request }) => {
 
         // CREATE
         const createPayload = RandomDataUtil.generateProductPayload();
@@ -55,7 +55,7 @@ test.describe.serial('CRUD Workflow API Tests', () => {
     // User CRUD Workflow
     // ---------------------------------------------------------
 
-    test('Workflow - User Create, Update, Delete @master @regression @e2e @api', async ({ request }) => {
+    test('Workflow - User Create, Update, Delete @master @regression @api', async ({ request }) => {
 
         // CREATE
         const createPayload = RandomDataUtil.generateUserPayload();
@@ -91,7 +91,7 @@ test.describe.serial('CRUD Workflow API Tests', () => {
     // Cart CRUD Workflow
     // ---------------------------------------------------------
 
-    test('Workflow - Cart Create, Update, Delete @master @regression @e2e @api', async ({ request }) => {
+    test('Workflow - Cart Create, Update, Delete @master @regression @api', async ({ request }) => {
 
         // CREATE
         const createPayload = RandomDataUtil.generateCartPayload(USER_ID);

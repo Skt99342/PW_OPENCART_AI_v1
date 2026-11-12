@@ -2,6 +2,9 @@ import { defineConfig, devices } from "@playwright/test";
 export default defineConfig({
   timeout: 30 * 1000, //30000 ms(30 secs)
   testDir: "./tests",
+  // TEMPORARY: DB spec depends on admin page objects/fixtures that are not created yet.
+  // Remove this line once tests/db is ready.
+  testIgnore: "**/tests/db/**",
   fullyParallel: true,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
